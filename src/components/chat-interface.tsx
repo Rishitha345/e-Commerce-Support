@@ -102,7 +102,7 @@ export default function ChatInterface() {
         </div>
       </CardHeader>
       <CardContent className="flex-1 overflow-hidden p-0">
-        <ScrollArea className="h-full" viewportRef={scrollAreaRef}>
+        <ScrollArea className="h-full" viewportProps={{ref: scrollAreaRef}}>
           <div className="p-6 space-y-6">
             {messages.map((message) => (
               <div key={message.id} className={cn("flex items-start gap-3", message.role === "user" && "justify-end")}>
